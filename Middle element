@@ -1,0 +1,14 @@
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+        ListNode *big=head,*small=head;
+        while(big && big->next )
+        {
+            small=small->next;
+            big=big->next->next;
+        }
+        return small;
+            
+        
+    }
+};
